@@ -1,7 +1,7 @@
 {
   "name": "nodestagram",
   "description": "Instagram API wrapper for node.",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "homepage": "https://github.com/warlock/nodestagram",
   "repository": {
     "type": "git",
