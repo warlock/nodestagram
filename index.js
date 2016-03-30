@@ -59,6 +59,10 @@ InstagramMediaClient.prototype.id = function (id, callback) {
     this.parent.fetch('/v1/media/'+id, callback);
 };
 
+InstagramMediaClient.prototype.comments = function (id, callback) {
+    this.parent.fetch('/v1/media/'+id+'/comments', callback);
+};
+
 InstagramMediaClient.prototype.popular = function (callback) {
     this.parent.fetch('/v1/media/popular/', callback);
 }
