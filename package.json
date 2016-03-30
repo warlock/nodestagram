@@ -1,13 +1,13 @@
 {
   "name": "instagram",
   "description": "Instagram API wrapper for node.",
-  "version": "0.0.4",
-  "homepage": "https://github.com/Swizec/nodestagram",
+  "version": "0.0.5",
+  "homepage": "https://github.com/warlock/nodestagram",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Swizec/nodestagram.git"
+    "url": "git@github.com:warlock/nodestagram.git"
   },
-  "author": "Swizec <swizec@swizec.com> (http://swizec.com)",
+  "author": "Josep Subils <josep@spellbook.io> (http://spellbook.io)",
   "main": "./index.js",
   "directories": {
     "lib": "."
