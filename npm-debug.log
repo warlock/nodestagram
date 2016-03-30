@@ -1,0 +1,100 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.1
+3 info using node@v5.8.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/josep/Documentos/node/nodestagram',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/josep/.npm/instagram/0.0.5/package.tgz not in flight; packing
+9 verbose correctMkdir /home/josep/.npm correctMkdir not in flight; initializing
+10 info lifecycle instagram@0.0.5~prepublish: instagram@0.0.5
+11 silly lifecycle instagram@0.0.5~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/josep/.npm/instagram/0.0.5/package.tgz',
+12 verbose tar pack   '/home/josep/Documentos/node/nodestagram' ]
+13 verbose tarball /home/josep/.npm/instagram/0.0.5/package.tgz
+14 verbose folder /home/josep/Documentos/node/nodestagram
+15 verbose addLocalTarball adding from inside cache /home/josep/.npm/instagram/0.0.5/package.tgz
+16 verbose correctMkdir /home/josep/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd instagram@0.0.5
+18 verbose afterAdd /home/josep/.npm/instagram/0.0.5/package/package.json not in flight; writing
+19 verbose correctMkdir /home/josep/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/josep/.npm/instagram/0.0.5/package/package.json written
+21 silly publish { name: 'instagram',
+21 silly publish   description: 'Instagram API wrapper for node.',
+21 silly publish   version: '0.0.5',
+21 silly publish   homepage: 'https://github.com/warlock/nodestagram',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+ssh://git@github.com/warlock/nodestagram.git' },
+21 silly publish   author:
+21 silly publish    { name: 'Josep Subils',
+21 silly publish      email: 'josep@spellbook.io',
+21 silly publish      url: 'http://spellbook.io' },
+21 silly publish   main: './index.js',
+21 silly publish   directories: { lib: '.' },
+21 silly publish   engines: { node: '*' },
+21 silly publish   readme: '# Nodestagram\n\nFORK VERSION 2016 - Bugs solved\n\nThis project started because I wanted to use instagram\'s API in node.js and there were no libraries yet.\n\nSince everything is so fresh spanking new, forks/pull-requests much appreciated.\n\n# Usage\n\nThe library is intended to be used as a thin wrapper over the basic Instagram API, so the\nidea is to keep everything as similar to the original as possible.\n\nEvery method should be passed some parameters if needed and a callback function. The callback\nshould accept a result and an error argument.\n\nThe convention being that when the error is null, the result contains media as returnd from the API,\nand when something goes wrong error is the status code as returned by the API and the result is the\nmeta info the API returned.\n\nFor example:\n\n    var instagram = require(\'instagram\').createClient(\'<client_id>\', \'<client_secret>\');\n\n    // fetch media by id\n    instagram.media.id(\'<id>\', function (images, error) { ... });\n\n    // fetch popular media\n    instagram.media.popular(function (images, error) { ... });\n\n    // search media\n    instagram.media.popular({lat: <some latitude>,\n    \t\t             lng: <some longitude>},\n\t\t\t    function (images, error) { ... });\n\n\n    // get info about a tag\n    instagram.tags.tag(\'snow\', function (tag, error) { ... });\n\n    // get recent media for a tag\n    instagram.tags.media(\'snow\', function (tag, error) { ... });\n    instagram.tags.media(\'snow\', {max_id: 5}, function (tag, error) { ... });\n    instagram.tags.media(\'snow\', {min_id: 5}, function (tag, error) { ... });\n    instagram.tags.media(\'snow\', {max_id: 5, min_id: 0}, function (tag, error) { ... });\n\n    // search for a tag\n    instagram.tags.search(\'snow\', function (tags, error) { ... });\n\n\n    // get info about a location\n    instagram.tags.tag(1, function (tag, error) { ... });\n\n    // get recent media for a location\n    instagram.tags.media(1, function (tag, error) { ... });\n    instagram.tags.media(1, {max_id: 5}, function (tag, error) { ... });\n    instagram.tags.media(1, {min_id: 5}, function (tag, error) { ... });\n    instagram.tags.media(1, {max_id: 5, min_id: 0}, function (tag, error) { ... });\n\n    // search for a location\n    instagram.tags.search({lat: ..., lng: ..., distance: ...}, function (tags, error) { ... });\n\n\n    // get info about a specific user\n    instagram.users.id(1234, function (user, error) { ... });\n    \n    // get recent media for a user\n    instagram.users.media(1234, {count: 12}, function (images, error, pagination) { ... });\n    \n    // getting own media, according to given *access_token* which is a required parameter\n    instagram.users.self({access_token: "1337", count: 12}, function (images, error, pagination) { ... });\n    \n    // search for usernames\n    instagram.users.search("Jack", function (users, error) { ... });\n    instagram.users.search({q: "John", count: 1}, function (users, error) { ... });\n     \t\n\n# License\n\nSome sort of BSD or MIT license,  the general idea being:\n\n- this is open source\n- you must give credit where credit is due\n- not viral such as GPL\n- you still can\'t change the license though\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '34cd9379faaa023b14263c25853a4f33c52ce2fe',
+21 silly publish   bugs: { url: 'https://github.com/warlock/nodestagram/issues' },
+21 silly publish   _id: 'instagram@0.0.5',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: 'b095f7f35f29f0cc94ef769314b1932e64b8f9ed',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name instagram
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry uri http://registry.npmjs.org/instagram
+27 verbose publish registryBase http://registry.npmjs.org/
+28 silly publish uploading /home/josep/.npm/instagram/0.0.5/package.tgz
+29 verbose request uri http://registry.npmjs.org/instagram
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 14:45:16
+32 verbose request using bearer token for auth
+33 verbose request id 3623caa45777df1d
+34 http request PUT http://registry.npmjs.org/instagram
+35 http 403 http://registry.npmjs.org/instagram
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '101',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Wed, 30 Mar 2016 12:45:18 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-ams4122-AMS',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1459341917.127228,VS0,VE1062' }
+37 verbose request invalidating /home/josep/.npm/registry.npmjs.org/instagram on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: You do not have permission to publish 'instagram'. Are you logged in as the correct user? : instagram
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+39 verbose stack     at emitTwo (events.js:100:13)
+39 verbose stack     at Request.emit (events.js:185:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+39 verbose stack     at emitOne (events.js:95:20)
+39 verbose stack     at Request.emit (events.js:182:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+40 verbose statusCode 403
+41 verbose pkgid instagram
+42 verbose cwd /home/josep/Documentos/node/nodestagram
+43 error Linux 4.2.0-34-generic
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+45 error node v5.8.0
+46 error npm  v3.8.1
+47 error code E403
+48 error You do not have permission to publish 'instagram'. Are you logged in as the correct user? : instagram
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]

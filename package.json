@@ -1,5 +1,5 @@
 {
-  "name": "instagram",
+  "name": "nodestagram",
   "description": "Instagram API wrapper for node.",
   "version": "0.0.5",
   "homepage": "https://github.com/warlock/nodestagram",
